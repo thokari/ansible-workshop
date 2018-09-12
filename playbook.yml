@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  tasks:
+
+    - name: Print hostvars
+      debug:
+        # See also `ansible.cfg` and `.ansible/facts`
+        msg: "{{ hostvars[inventory_hostname] }}"
